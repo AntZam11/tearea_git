@@ -2,9 +2,13 @@
 #include <iostream>
 
 using namespace std;
+
 main(){
-	string nit,nombres,apellidos,direccion;
+	string nit,nombres,apellidos,direccion,fecha_nacimiento;
 	int telefono;
+    double cui;
+	
+	
 	
 	cout<<"ingresar Nit:";
 	cin>>nit;
@@ -16,13 +20,13 @@ main(){
 	cin>>direccion;
 	cout<<"telefono:";
 	cin>>telefono; 
+    cout<<"Fecha_nacimiento:";
+	cin>>fecha_nacimiento;
+    cout<<"CUI:";
+    cin>>cui;
 	
 	//instancia de un objeto
-	Cliente obj = Cliente(nombres,apellidos,direccion,telefono,nit);
-	obj.mostrar();
+Cliente obj = Cliente (nombres,apellidos,direccion,nit,fecha_nacimiento,telefono,cui);
+obj.mostrar();
 	
-	cout<<"ingresar Nit:";
-	cin>>nit;
-	obj.setNit(nit);
-	obj.mostrar();
 }

@@ -10,11 +10,12 @@ class Cliente: Persona  {
 	//constructor
 	public :
 	Cliente (){
-		
+double cui;
 	}
 	
-	Cliente(string nom,string ape,string dir,string n,string fech,int tel) : Persona(nom,ape,dir,fech,tel){
+	Cliente(string nom,string ape,string dir,string n,string fech,int tel, double cui) : Persona(nom,ape,dir,fech,tel,cui){
 		nit = n;
+	
 		
 		
 	}
@@ -27,6 +28,7 @@ class Cliente: Persona  {
 	void setDirecciones(string dir){direcciones =dir;}
 	void setTelefono(int tel){telefono =tel;}
 	void setfecha_nacimiento(string fech){fecha_nacimiento = fech;}
+	void setCui(double c){Cui = c;}
 	
 	
 	//get (mostrar)
@@ -36,11 +38,11 @@ class Cliente: Persona  {
 	string getDirecciones(){return direcciones;}
 	string getFecha_nacimiento(){return fecha_nacimiento;}
 	int getTelefono(){return telefono;}
-	
+    double getCui(){return Cui;}
 	//metodos
 	void mostrar(){
 	       cout<<"____________________________________"<<endl;
-	       cout<<nit<<","<<nombres<<","<<apellidos<<","<<direcciones<<","<<telefono<<fecha_nacimiento<<endl;
+	       cout<<nit<<","<<nombres<<","<<apellidos<<","<<direcciones<<","<<telefono<<fecha_nacimiento<<","<<Cui<<endl;
 	}
 	
 	
